@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .coin {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn-icons-png.flaticon.com/512/1933/1933993.png') no-repeat center/cover;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+        .balance {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Кликер</h1>
+    <div class="balance">Баланс: <span id="balance">0</span></div>
+    <div class="coin" onclick="incrementBalance()"></div>
+
+    <script>
+        let balance = 0;
+
+        function incrementBalance() {
+            balance += 1;
+            document.getElementById('balance').textContent = balance;
+        }
+    </script>
+</body>
+</html>
